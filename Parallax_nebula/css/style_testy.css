@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: white;
+    
+}
+.image {
+    height: 750px;
+    width: 100%;
+    background: #55e6c5;
+    z-index: 1;
+    }
+
+.content {
+    height: 750px;
+    width:100%;
+    background: white;
+    z-index: 2;
+}
+.content h1 {
+    font-size: 40px;
+    color: #464646;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin: 30px 60px;
+}
+.content p {
+    font-size:20px;
+    color: #343434;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 30px 60px;
+}
+#wall_1 {
+    margin-bottom: -3%;
+    margin-top:-3%;
+    background-attachment: fixed;
+    position: relative
+}
+#wall_2 {
+    background-attachment: fixed;
+    position: relative
+}
+#wall_3 {
+    background-attachment: fixed;
+    position: relative
+}
+
+#wall_4 {
+    margin-bottom: -3%;
+    margin-top:-3%;
+    background: #A7CBDA;
+    background-attachment: fixed;
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+}
+
+#wall_4 h1{
+    margin-left:20%;
+    margin-right: 20%;
+}
+
+#nav {
+    height: 70px;
+    background-color: #010A26;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 100;
+    -webkit-box-shadow:0px 0px 20px rgba(44,44,44,.3);
+}
+#nav a{
+    color: white;
+
+}
+
+#content_1 {position: relative;}
+#content_2 {position: relative;}
+
+h1{
+    font-size:20px;
+    color: #343434;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 30px 60px;
+}
+
+h3{
+    font-size:20px;
+    color: #343434;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 30px 60px;
+}
+
+h1::first-letter {
+    font-size: 60px;
+    font-weight: 600;
+    color:#F4C2CD;
+}
+
+#bg{
+    width:100%;
+}
+video#bgvid {
+    position: fixed; right: 0; bottom: 0;
+    width: auto; height: auto; z-index: -100;
+    background-size: cover;
+    margin: 0 auto;
+    text-align: center;
+}
+#test{
+    font-size: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+div.container4 {
+    height: 10em;
+    position: relative }
+div.container4 p {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/*-------------------------------------------------------------------------------------------*/
+.slideshow{
+    width:100%;
+    height:600px;
+    margin-bottom:-1%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+figure{
+    position: absolute;
+    opacity: 0;
+    transition: 1s opacity;
+}
+figcaption{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: .8em;
+    bottom: .75em;
+    right: .35em;
+    padding: .25em;
+    color: #fff;
+    background: rgba(0,0,0, .25);
+    border-radius: 2px;
+}
+figcaption a{
+    color: #fff;
+}
+figure.show{
+    opacity: 1;
+    position: static;
+    transition: 1s opacity;
+}
+.next, .prev{
+    color: #fff;
+    position: absolute;
+    background: #A7CBDA;
+    top: 50%;
+    z-index: 1;
+    font-size: 2em;
+    margin-top: -.75em;
+    user-select: none;
+}
+.next:hover, .prev:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.next{
+    right: 0;
+    padding: 10px 5px 15px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.prev {
+    left: 0;
+    padding: 10px 10px 15px 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+/* ------------------------------------------------------------------------------------
+                    FLIP ID
+-------------------------------------------------------------------------------------*/
+h4{
+    font-size:30px;
+    color: #343434;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: white;
+}
+.question{
+    width: 60%;
+    height: 250px;
+    margin-top: 8%;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 8%;
+}
+.container {
+    margin-top:5%;
+    width: 30%;
+    height: 100px;
+    padding-left: 10%;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    display: block;
+    display: inline-block;
+    float: left;
+
+}
+#card {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+
+}
+
+#card2 {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+#card3 {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+
+}
+#card4 {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+
+}
+
+#card div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    word-wrap: break-word;
+}
+#card2 div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+#card3 div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+#card4 div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+#card .front {
+    background: #A7CBDA;
+    float: right;
+    font-size: 100%;
+}
+#card .back {
+    background: #CCB4C4;
+    font-size: 50%;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+#card.flipped {
+
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+    word-break: break-all;
+}
+#card2 .front {
+    background: #A7CBDA;
+    float: right;
+    font-size: 100%;
+
+}
+#card2 .back {
+    background: #CCB4C4;
+    font-size: 100%;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+#card2.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+.banner {
+    margin-top: 15%;
+}
+
+
+.banner .info {
+    display: none;
+}
+
+.banner a {
+    height: 50px;
+    display: inline-block;
+    width: 48%;
+    text-decoration: none;
+    border: 2px solid white;
+    margin-right: -4px;
+    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: white;
+}
+.banner a:last-child {
+    margin-left: 2%;
+}
+
+.banner a:hover {
+    background: #F4C2CD;
+}
+
+
+
+.clients .clients-info {
+    padding: 7px;
+    box-shadow: 1px 1px 3px gray, -1px -1px 3px gray;
+;
+    margin-bottom: 20px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    opacity: 0;
+    margin: 15px auto 10px;
+    background: #ededed;
+}
+
+.clients .clients-info h3 {
+    margin: 0;
+    line-height: 180px;
+}
+
+section.blogs {
+    margin-bottom: 0;
+    background-color: white;
+    margin-bottom: -2.5%;
+}
+
+.blogs p {
+    position: relative;
+    opacity: 0;
+    left: -750px;
+    font-size:20px;
+    color: #343434;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 30px 60px;
+}
+
+.col-lg-4 {
+    position: relative;
+}
+
+.blogs img {
+    position: absolute;
+    right: -330px;
+    margin-top: 10px;
+    opacity: 0;
+}
+
+.firstAnimation {
+    opacity: 1;
+    height: 180px;
+    width: 250px;
+}
+
+.blogs h1{
+    font-size:20px;
+    color: #343434;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 30px 60px;
+}

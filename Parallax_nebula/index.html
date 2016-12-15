@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mgławice</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <script src="js/jquery.stellar.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script>
+        $(window).scroll(function(){
+            var windowWidth = $(this).width();
+            var windowHeight = $(this).height();
+            var windowScrollTop = $(this).scrollTop();
+            if(windowScrollTop>60){
+                $('.banner h2').css('display','none');
+                $('.banner .info').css('display','block');
+            }else{
+                $('.banner h2').css('display','block');
+                $('.banner .info').css('display','none');
+            }
+            var firstAnimation = function(){
+                 $('.clients .clients-info').each(
+                        function(){
+                            $(this).delay(500).animate(
+                                    {opacity:1,height:'180',width:'250'},2000);}
+                );
+            };
+            var secondAnimation = function(){};
+            var thirdAnimation = function(){
+                $('.blogs').find('p').delay(1400).animate({opacity:1, left:0},'slow');
+                $('.blogs').find('button').delay(2500).animate({opacity:1, bottom:0},'slow');
+                $('.blogs').find('img').delay(2000).animate({opacity:1, right:0},'slow');
+                $('.content').find('p').delay(2500).animate({opacity:1, bottom:0},'slow');
+            };  if(windowWidth<=549){
+                if(windowScrollTop>600){
+                    firstAnimation();
+                }
+                if(windowScrollTop>1750){
+                    secondAnimation();
+                }
+                if(windowScrollTop>3500){
+                    thirdAnimation();
+                }
+            }else if(windowWidth>549 && windowWidth<=991){
+                if(windowScrollTop>480){
+                    firstAnimation();
+                }if(windowScrollTop>1150){
+                    secondAnimation();
+                }if(windowScrollTop>2200){
+                    thirdAnimation();
+                }
+            }else{
+                if(windowScrollTop>450){
+                    firstAnimation();
+                }if(windowScrollTop>850){
+                    secondAnimation();
+                }
+                if(windowScrollTop>50){
+                    thirdAnimation();
+                }
+            }
+        });
+    </script>
+    <script>
+        var video = document.getElementById("myvideo");
+        function toggleControls() {
+            if (video.hasAttribute("controls")) {
+                video.removeAttribute("controls")
+            } else {
+                video.setAttribute("controls","controls")
+            }
+        }
+  </script>
+    <script>
+        function flip()
+        {
+            $('#card').toggleClass('flipped');
+
+        }
+        function flip2()
+        {
+            $('#card2').toggleClass('flipped');
+        }
+    </script>
+    <script>
+        var inc=0;
+        function myFunction() {
+            inc=inc+1;
+            if(inc >= 3)
+            {
+                alert("Z podpowiedzi można skorzystać tylko raz!");
+            }
+            else flip();
+        }
+        var inc3=0;
+        function myFunction3() {
+            inc3=inc3+1;
+            if(inc3 >= 3)
+            {
+                alert("Z podpowiedzi można skorzystać tylko raz!");
+            }
+            else flip3();
+        }
+    </script>
+</head>
+<body>
+   <div id="nav">
+       <ul class="snip1189">
+           <li ><a href="#wall_1" >MGŁAWICE</a></li>
+           <li><a href="#wall_2">CIEKAWOSTKI</a></li>
+           <li><a href="#wall_3">DŹWIĘKI KOSMOSU</a></li>
+       </ul>
+   </div>
+   <div id="bg">
+       <div class="banner">
+           <h2>MGŁAWICE</h2>
+           <div class="info">
+               <a href="#gallery" title="">ZOBACZ GALERIĘ</a>
+               <a href="#q" title="">SPRAWDŹ SIĘ</a>
+           </div>
+       </div>
+       <video id="bgvid" preload="auto" autoplay="true" loop="loop" muted="muted">
+           <source src="Images/Nebula Galaxy-HD.mp4">
+           Video not supported.
+       </video>
+   </div>
+   <section class="blogs" id="wall_1">
+                   <h1>MGŁAWICE</h1>
+               <p>Mgławice, pierwotnie obiekty astronomiczne o rozmytych konturach (m.in. gromady gwiazd i galaktyki).
+                   W dwudziestowiecznej astronomii terminem mgławice określa się obiekty o rozmytych konturach i nie należące do powyższych klas.</p>
+               <p>Wyróżnia się zbudowane z materii międzygwiazdowej (pył lub gaz) mgławice galaktyczne, dzielące się na: mgławice emisyjne
+                       jasne, świecące własnym światłem dzięki pobudzeniu bliską, gorącą gwiazdą, w widmie widoczne są linie widmowe emisyjne),
+                       mgławice refleksyjne (jasne, świecące światłem odbitym, dają widmo ciągłe z liniami absorpcyjnymi, oświetlone są
+                       chłodniejszą gwiazdą) oraz mgławice absorpcyjne (ciemne, widoczne dzięki przesłanianiu dalszych świecących obiektów).
+                       Istnieją ponadto mgławice dyfuzyjne.</p>
+               <p>Mgławice planetarne w postaci pierścienia otaczającego gwiazdę (często niewidoczną) to pozostałości po wybuchu nowej lub supernowej .</p>
+               <p>Najbardziej znanymi mgławicami są: mgławica planetarna Krab (pozostałość po wybuchu supernowej w 1054), mgławica emisyjna Oriona z
+                   mgławicą absorpcyjną Koński Łeb (Orion), mgławica cirrusowa w Łabędziu, mgławica Orzeł (Wąż) itd.</p><button></button>
+   </section>
+   <div class="slideshow" id="gallery">
+       <figure class="show">
+           <img src="Images/kl.jpg" width="100%" /><figcaption>"Koński łeb" </figcaption>
+       </figure>
+       <figure>
+           <img src="Images/kila.jpg" width="100%" /><figcaption>"Kila" </figcaption>
+       </figure>
+       <figure>
+           <img src="Images/carina.jpg" width="100%" /><figcaption>"Carina" </figcaption>
+       </figure>
+       <span class="prev">&laquo;</span>
+       <span class="next">&raquo;</span>
+       <script>
+           (function(){
+           var counter = 0,
+                   $items = document.querySelectorAll('.slideshow figure'),
+                   numItems = $items.length;
+           var showCurrent = function(){
+               var itemToShow = Math.abs(counter%numItems);
+               [].forEach.call( $items, function(el){
+                   el.classList.remove('show');
+               });
+               $items[itemToShow].classList.add('show');
+           };
+           document.querySelector('.next').addEventListener('click', function() {
+               counter++;
+               showCurrent();
+           }, false);
+           document.querySelector('.prev').addEventListener('click', function() {
+               counter--;
+               showCurrent();
+           }, false);
+       })();
+       </script>
+   </div>
+   <div id="wall_4" class="image" data-stellar-background-ratio="0.4" >
+       <h1>"The molecules of your body are the same molecules that make up this station, and the nebula outside, that burn inside the stars themselves.
+           We are starstuff."</h1>
+   </div>
+   <section class="blogs" id="wall_2">
+              <h1>CIEKAWOSTKI</h1>
+        <p>Niespełna kilka miesięcy temu astronomowie dostrzegli niebywale ciekawą mgławicę o wyjątkowym kształcie, wyjątkowym,
+                bo przypomina jajko sadzone. Środkiem danej mgławicy jest nietypowa i bardzo rzadko spotykana gwiazda - niezwykle duża i
+                żółta.</p>
+           <p> Gwiazdy takie jak Słońce mogą stać się niezwykle fotogeniczne pod koniec swojego życia. Dobrym tego przykładem jest
+                NGC 2392, która znajduje się około 4 200 lat świetlnych od Ziemi. NGC 2392 zwana także Mgławicą Eskimos (ang. Eskimo Nebula)
+                jest tzw. mgławicą planetarną. Określenie to jest jednak mylące, ponieważ mgławice planetarne w rzeczywistości nie mają nic
+                wspólnego z planetami. Termin ten to nic innego jak pozostałość historyczna. Obiekty te (obserwowane przez astronomów przy
+                użyciu małych teleskopów optycznych) przypominały swoim kształtem dyski protoplanetarne. </p>
+            <p>Gigantyczny i niezwykle zaawansowany Teleskop Hubble'a stworzył nowe fotografie Mgławicy Laguna wchodzącej w skład
+                gwiazdozbioru Strzelca. Mgławica jest jednym z najpiękniejszych obiektów widocznych gołym okiem na polskim niebie.
+                Laguna jest mgławicą dyfuzyjną, a więc gigantyczną chmurą świecącego gazu i plazmy. Dla naukowców są one niezastąpionym
+                środkiem do określania odległości do sąsiednich galaktyk oraz ich składu chemicznego.</p>
+            <p>Obserwatorium techniczne będące pod władaniem NASA (Chandra) zauważyło zachodzące w Mgławicy Carina ciekawe zmiany. Dzięki zdjęciom specjaliści stwierdzili, że gwiazdy znajdujące się w niej ulegają samozniszczeniu.
+                </p>
+
+                <p>Teleskop kosmiczny pracujący w zakresie promieni rentgenowskich Chandra wykrył ponad 14 tys. gwiazd w jej obrębie.
+                Chandra dała także dowód na to, że masywne gwiazdy w Mgławicy ulegają samozniszczeniu. Po pierwsze, teleskop uwidocznił
+                deficyt jasnych promieni rentgenowskich w regionie znanym jako Trumpler 15 sugerując, że masywne gwiazdy w tej gromadce
+                wybuchły niedawno jako Supernowe. </p><button></button>
+    </section>
+   <div class="question" id="q">
+       <h4> Gdzie znajduje się największy teleskop na świecie?</h4>
+       <div class="container">
+           <div id="card" onclick="myFunction()">
+               <div class="front"><h4>PODPOWIEDŹ</h4></div>
+               <div class="back">
+                   <h4>Mowa o GTC </h4>
+               </div>
+           </div>
+       </div>
+       <div class="container">
+           <div id="card2" onclick="flip2()">
+               <div class="front"><h4>ODPOWIEDŹ</h4></div>
+               <div class="back">
+                  <h4>Wyspa La Palma</h4>
+               </div>
+           </div>
+       </div>
+   </div>
+   <section class="blogs" id="wall_3">
+       <div class="container2">
+                   <h1>DŹWIĘKI KOSMOSU</h1>
+                       <p><i>Can you hear sounds in space? Now you’ve probably heard that there’s no sound in space, but technically that’s not
+                        true. Now yes, space is a virtual vacuum... However, sound does exist in the form of electromagnetic vibrations that
+                        pulsate in similar wavelengths. What NASA did was design special instruments that could record these electromagnetic
+                        vibrations, and transferred them into sounds that our ears could hear. What you’re about hear is actual sound in space,
+                        nothing has been added. It’s a beautiful, yet haunting sound that music legend Hans Zimmer would be jealous of.</i></p>
+                        <p>Hover over the spaceship to hear sounds of Mars.</p>
+           <button type="button" class="btn"><img src="Images/galaxy.svg">Learn more</button>
+       </div>
+               <audio id="beep" >
+                   <source src="audio/sun.mp3" ></source>
+               </audio>
+       <script>
+           var beep= $("#beep")[0];
+       $(".btn")
+               .mouseenter(function() {
+                   beep.pause();
+                   beep.play();
+               });
+       </script>
+   </section>
+   <footer>
+       <h3>Wiktoria Rębacz  IS  WFiIS</h3>
+   </footer>
+</body>
+</html>
