@@ -1,0 +1,125 @@
+<!--
+Responsywna strona prezentująca teorię dotyczącą spadku swobodnego. Teoria pochodzi z książki "Repetytorium z fizyki" Marka Wójcika,
+ natomiast prezentowany obrazek pochodzi ze strony http://www.fizykon.org/kinematyka/rzuty_spadek_swobodny.htm.
+ Zostały zastosowane m.in. elementy <article> oraz mathML. Ze względu na użycie mathML sugeruje się używanie przeglądarki Firefox.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title> Spadek swobodny </title>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/skrypt.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.20/dist/jquery.flip.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+
+	<header>
+		<div id="logo"><h5>Spadek swobodny </h5></div>
+		<nav id="nav-main">
+			<a id="menu-icon"></a>
+			<ul>
+				<li><a href="wideo.html">Wideo</a></li>
+				<li><a href="teoria.html">Teoria</a></li>
+				<li><a href="animacja.html">Animacja</a></li>
+				<li><a href="test.html">Test</a></li>
+				<li><a href="index.html">Strona glowna</a></li>
+				<li><a href="#">Bluemix</a></li>
+			</ul>
+		</nav>
+		<div id="nav-trigger">
+    			<span>Menu</span>
+		</div>
+		<nav id="nav-mobile"></nav>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script>
+		    $(document).ready(function(){
+			$("#nav-mobile").html($("#nav-main").html());
+			$("#nav-trigger span").click(function(){
+			    if ($("nav#nav-mobile ul").hasClass("expanded")) {
+				$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+				$(this).removeClass("open");
+			    } else {
+				$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+				$(this).addClass("open");
+			    }
+			});
+		    });
+		</script>
+
+	</header>
+	<body>
+	<style>
+		img {display: block; float: left;margin-top:20%; width: 25%}
+	</style>
+
+	<picture>
+		<source
+				media="(min-width: 650px)"
+				srcset="images/spadek4.gif">
+		<source
+				media="(min-width: 465px)"
+				srcset="images/spadek4.gif">
+		<img
+				src="images/spadek4.gif"
+				alt="ilustracja spadku swobodnego">
+	</picture>
+	<article>
+	<!--<div id="teoria">-->
+		<h4 align="center">WSTĘP</h4>
+		<p>Przyspieszenie ziemskie jest tym rodzajem przyspieszenia, jakiego wszyscy doznajemy, często nawet nie zdając sobie z tego sprawy. To przyspieszenie z jakim spodałyby wszystkie ciała, gdyby nie było oporu powietrza. Opór powietrza powoduje, że ruch jakim ciała spadają, nie jest dokładnie ruchem jednostajnie przyspieszonym, a nawet dla dużych prędkości staje się ruchem jednostajnym - na przykład ruch spadochroniarza z otwartym spadochronem. Dla małych prędkości spadających ciał opór powietrza jest niewielki i zaniedbywalny.</p>
+		<p> Wartości liczbowa przyspieszenia ziemskiego zmierzonego na poziomie morza wynosi g = 9,81 m/s<sup>2</sup>, a wektor przyspieszenia ziemskiego g ma kierunek linii przechodzącej przez środek Ziemi i zwrot ku temu środkowi. Przyspieszenie ziemskie bardzo wolno maleje wraz ze wzrostem wysokości, na przykład na wysokości 1 km stanowi ono 99,97% wartości g. W związku z tym, gdy opisujemy ruch ciała odbywająćy się w pobliżu powierzchni Ziemi, możemy przyjąć:</p>
+		<ul class="lista">
+			<li>wartość przyspieszenia ziemskiego równą g = 9,81 m/s<sup>2</sup></li>
+			<li>kierunek wektora przyspieszenia ziemkiego prostopadły do powierzchni Ziemi</li>
+			<li>zwrot tego wektora ku powierzchni Ziemi </li>
+		</ul>
+		<h4>SPADEK SWOBODNY</h4>
+		<p>Przez spadek swobodny rozumie się sytuację, w której ciało zaczyna spadać bez prędkości początkowej. W takim przypadku mówi się, że ciało zostało upuszczone lub puszczone swobodnie.</p>
+		<p>Ruch ciała zachodzi pod wpływem przyspieszenia ziemskiego g, zatem jest jednostajnie przyspieszony. Prędkość początkowa v<sub>0</sub>  jest równa zaru, a w chwilii t = 0 ciało znajduje się na wysokości h - jeo współrzędna początkowa wynosi więc x<sub>0</sub> = h.</p>
+		<p>Wykorzystując te warunki, można napisać równanie ruchu:</p>
+		<div class="equation">
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+				<mi>x</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>&#x000A0;</mo><mo>=</mo><mo>&#x000A0;</mo><msub><mi>x</mi><mn>0</mn></msub><mo>-</mo><mfrac><mrow><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mo>=</mo><mi>h</mi><mo>-</mo><mfrac><mrow><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac>
+			</math>
+			</div>
+		<!--<p><center><b>x(t) = x<sub>0</sub> - at<sup>2</sup> / 2 = h - gt<sup>2</sup> / 2</b></center></p>ROWNANIE W WERSJI DLA CHROMA LUB OPERY -->
+		<p>oraz wyrażenie opusujące prędkość ciała spadającego swobodnie:</p>
+			<div class="equation">
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+				<mi>v</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>&#x000A0;</mo><mo>=</mo><mo>&#x000A0;</mo><msub><mi>v</mi><mi>o</mi></msub><mo>-</mo><mi>a</mi><mi>t</mi><mo>=</mo><mo>-</mo><mi>g</mi><mi>t</mi>
+			</math>
+			</math>
+		</div>
+		<!--<p><center><b>v(t) = v<sub>0</sub> - at = - gt</b></center></p> - ROWNANIE W WERSJI DLA CHROMA LUB OPERY -->
+		<p>Znak minus przed przyspieszeniem g w obu wzorach wynika z tego, że zwrot przyspieszenia ziemskiego jest przeciwny do zwrotu osi OX.</p>
+		<p>Posługując się równaniami ruchu ciała spadającego swobodnie z wysokości h, można bez trudu znaleźć odpowiedzi na wszystkie możliwe pytania dotyczące jego ruchu. </p>
+	<!--</div>-->
+	</article>
+	<footer>
+	<section>
+		<h3><b> WFiIS</b></h3>
+		<p> Wiktoria Rębacz <p>
+		<p>IS, 2 rok<p>
+	</section>
+	<section>
+		<h3> Dołącz do nas! </h3>
+		<ul class="social">
+			<li> <a href="https://www.facebook.com/AGH.Krakow/?fref=ts"></a> <img src="images/fb.svg" alt="Relevant textual alternative to the image" /></li>
+			<li> <a href="https://www.youtube.com/user/tvagh"></a><img src="images/yt.svg" alt="Relevant textual alternative to the image"/></li>
+			<li> <a href="https://pl.pinterest.com/search/pins/?q=agh%20cracow&rs=typed&0=agh%7Ctyped&1=cracow%7Ctyped"></a><img src="images/pin.svg" alt="Relevant textual alternative to the image"/></li>
+
+		</ul>
+	</section>
+	<section>
+		<h3><b> Akademia Górniczo - Hutnicza</b></h3>
+		<p> im. S. Staszica w Krakowie<p>
+	</section>
+	</footer>
+</body>
+</html>
+

@@ -1,0 +1,94 @@
+<!--
+Jest to strona startowa projektu. Prezentowane ikony pochodzą ze strony udostępniającej pobieranie darmowych ikon.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title> Spadek swobodny </title>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/skrypt.css">
+	<link rel="stylesheet" type="text/css" href="css/flipping.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.20/dist/jquery.flip.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+</head>
+<body>
+	<header>
+		<div id="logo"><h5>Spadek swobodny </h5></div>
+		<nav id="nav-main">
+			<a id="menu-icon"></a>
+			<ul>
+				<li><a href="wideo.html">Wideo</a></li>
+				<li><a href="teoria.html">Teoria</a></li>
+				<li><a href="animacja.html">Animacja</a></li>
+				<li><a href="test.html">Test</a></li>
+				<li><a href="indexhtml">Strona glowna</a></li>
+				<li><a href="#">Bluemix</a></li>
+			</ul>
+		</nav>
+		<div id="nav-trigger">
+    			<span>Menu</span>
+		</div>
+		<nav id="nav-mobile"></nav>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script>
+		    $(document).ready(function(){
+			$("#nav-mobile").html($("#nav-main").html());
+			$("#nav-trigger span").click(function(){
+			    if ($("nav#nav-mobile ul").hasClass("expanded")) {
+				$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+				$(this).removeClass("open");
+			    } else {
+				$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+				$(this).addClass("open");
+			    }
+			});
+		    });
+		</script>
+
+	</header>
+	<div id = "pic">
+	<section>
+		<img src="images/question-mark.svg" alt="Relevant textual alternative to the image"/>
+		<h1>Błądzisz?</h1>
+		<p>Masz problemy z fizyką? Nie rozumiesz spadku swobodnego? Grawitacja to twój koszmar? Nie przejmuj się - nie jesteś jedyny! Najnowsze badania pokazują, że młodzi ludzie w każdej grupie wiekowej wskazują fizykę jako najtrudniejszy i najgorzej nauczany przedmiot szkolny.</p>
+	</section>
+	<section>
+		<img src="images/atom.svg" alt="Relevant textual alternative to the image"/>
+		<h1>Poznawaj!</h1>
+		<p>Na naszej stronie znajdziesz wszystkie materiały potrzebne do zrozumienia i polubienia fizyki. Znajdziesz tu zarówno zwykłą teorię jak i lekcje wideo, na których prowadzący Politechniki Warszawskiej opowiadają o teorii spadku swobodnego. W zakładce "animacja" możesz obejrzeć animacje ilustrującą spadek swobodny.</p>
+	</section>
+	<section>
+		<img src="images/hands.svg" alt="Relevant textual alternative to the image"/>
+		<h1>Utrwalaj!</h1>
+		<p>Prawdopodobnie słyszałeś już o krzywej zapominania - im później zaczniej powtarzać materiał, tym mniej zapamiętasz. Aby uniknąć takiej sytuacji, proponujemy rozwiązanie naszego testu, na który składają się proste zadania wraz z podpowiedziami i odpowiedziami.</p>
+	</section>
+	</div>
+	<div class="clear"></div>
+
+	<footer>
+	<section>
+		<h3><b> WFiIS</b></h3>
+		<p> Wiktoria Rębacz <p>
+		<p>IS, 2 rok<p>
+	</section>
+	<section>
+		<h3> Dołącz do nas! </h3>
+		<ul class="social">
+			<li> <a href="https://www.facebook.com/AGH.Krakow/?fref=ts"></a> <img src="images/fb.svg" alt="Relevant textual alternative to the image" /></li>
+			<li> <a href="https://www.youtube.com/user/tvagh"></a><img src="images/yt.svg" alt="Relevant textual alternative to the image"/></li>
+			<li> <a href="https://pl.pinterest.com/search/pins/?q=agh%20cracow&rs=typed&0=agh%7Ctyped&1=cracow%7Ctyped"></a><img src="images/pin.svg" alt="Relevant textual alternative to the image"/></li>
+
+		</ul>
+	</section>
+	<section>
+		<h3><b> Akademia Górniczo - Hutnicza</b></h3>
+		<p> im. S. Staszica w Krakowie<p>
+	</section>
+	</footer>
+</body>
+</html>
+

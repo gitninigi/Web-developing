@@ -1,0 +1,21 @@
+#all{
+	margin-top: 10%;
+	margin-bottom: 3%;	
+	width:100%;
+	float:left;
+	text-align:center;
+}
+div.sub, iframe {
+	margin-top: 0px ;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+
+iframe{
+	width: 560px;
+	height: 315px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

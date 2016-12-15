@@ -1,0 +1,20 @@
+/* Some basic styling */
+/*#canvas {
+	display: block;
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 4%;
+}
+#canvas_odbicie {
+	display: block;
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 4%;
+}*/
+#title
+{
+	margin-top: 8%;
+	margin-bottom: 1%;
+}

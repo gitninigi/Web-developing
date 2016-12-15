@@ -1,0 +1,149 @@
+<!--
+Plik wyświetla stronę internetową, na której znajduje się test. Główną prezentowaną funkcjonalnością jest obracanie elementów
+tzw. flipping cards oraz zliczanie liczby kliknięć. Wykoszystano biblioteke jQuery.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title> Spadek swobodny </title>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/skrypt.css">
+	<link rel="stylesheet" type="text/css" href="css/flipping.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.20/dist/jquery.flip.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<div id="logo"><h5>Spadek swobodny </h5></div>
+		<nav id="nav-main">
+			<a id="menu-icon"></a>
+			<ul>
+				<li><a href="wideo.html">Wideo</a></li>
+				<li><a href="teoria.html">Teoria</a></li>
+				<li><a href="animacja.html">Animacja</a></li>
+				<li><a href="test.html">Test</a></li>
+				<li><a href="index.html">Strona glowna</a></li>
+				<li><a href="#">Bluemix</a></li>
+			</ul>
+		</nav>
+		<div id="nav-trigger">
+    			<span>Menu</span>
+		</div>
+		<nav id="nav-mobile"></nav>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script>
+		    $(document).ready(function(){
+			$("#nav-mobile").html($("#nav-main").html());
+			$("#nav-trigger span").click(function(){
+			    if ($("nav#nav-mobile ul").hasClass("expanded")) {
+				$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+				$(this).removeClass("open");
+			    } else {
+				$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+				$(this).addClass("open");
+			    }
+			});
+		    });
+		</script>		
+	</header>
+	<div class="question">
+		<script>
+		function flip() 
+		{
+		    $('#card').toggleClass('flipped');
+		   
+		}
+		function flip2() 
+		{
+		    $('#card2').toggleClass('flipped');
+		}
+		</script>
+		<script>
+			var inc=0;
+			 function myFunction() {
+			    inc=inc+1;
+			    if(inc >= 3)
+			    {
+			    	alert("Z podpowiedzi można skorzystać tylko raz!");  
+			    }
+			    else flip();
+			 }
+			 var inc3=0;
+			 function myFunction3() {
+			    inc3=inc3+1;
+			    if(inc3 >= 3)
+			    {
+			    	alert("Z podpowiedzi można skorzystać tylko raz!");  
+			    }
+			    else flip3();
+			 }
+		</script>
+		<h1> W jakim czasie ciało swobodnie spadające przebędzie <i>n</i>-ty metr swojej drogi?</h1>
+		<div class="container">
+		  <div id="card" onclick="myFunction()">
+		    <div class="front"><h6>PODPOWIEDŹ</h6></div>
+		    <div class="back">
+			<h4>y<sub>1</sub> = gt<sub>1</sub><sup>2</sup>/2, gdzie y<sub>1</sub> = (n-1)l</h4>
+			<h4>y<sub>2</sub> = gt<sub>2</sub><sup>2</sup>/2, gdzie y<sub>2</sub> = nl</h4>
+		    </div>
+		  </div>
+		</div>
+		<div class="container">
+		  <div id="card2" onclick="flip2()">
+		    <div class="front"><h6>ODPOWIEDŹ</h6></div>
+		    <div class="back"><h4>&Delta; = &radic;<span style="text-decoration: overline">2/g</span>l(&radic;<span style="text-decoration: overline">n</span>-&radic;<span style="text-decoration: overline">n-1</span>)</h4></div>
+		  </div>
+		</div>
+	</div>
+		<div class="question">
+		<script>
+		function flip3() 
+		{
+		    $('#card3').toggleClass('flipped');
+		}
+		function flip4() 
+		{
+		    $('#card4').toggleClass('flipped');
+		}
+		</script>
+	
+		<h1> Ciało swobodnie upuszczono z wysokości h. Obliczmy jaka jest prędkość ciała w momencie zetknięcia z powierzchnią Ziemi?</h1>
+		<div class="container">
+		  <div id="card3" onclick="myFunction3()">
+		    <div class="front"><h6>PODPOWIEDŹ</h6></div>
+		    <div class="back"><h4>Prędkość ta jest równa prędkości po czasie równym czasowi spadania.</h4></div>
+		  </div>
+		</div>
+		  <div class="container">
+		  <div id="card4" onclick="flip4()">
+		    <div class="front"><h6>ODPOWIEDŹ</h6></div>
+		    <div class="back"><h4>v(t<sub>0</sub>)=-&radic;<span style="text-decoration: overline">2gh</span></h4></div>
+		  </div>
+		</div>
+	</div>
+	<footer>
+	<section>
+		<h3><b> WFiIS</b></h3>
+		<p> Wiktoria Rębacz <p>
+		<p>IS, 2 rok<p>
+	</section>
+	<section>
+		<h3> Dołącz do nas! </h3>
+		<ul class="social">
+			<li> <a href="https://www.facebook.com/AGH.Krakow/?fref=ts"></a> <img src="images/fb.svg" alt="Relevant textual alternative to the image" /></li>
+			<li> <a href="https://www.youtube.com/user/tvagh"></a><img src="images/yt.svg" alt="Relevant textual alternative to the image"/></li>
+			<li> <a href="https://pl.pinterest.com/search/pins/?q=agh%20cracow&rs=typed&0=agh%7Ctyped&1=cracow%7Ctyped"></a><img src="images/pin.svg" alt="Relevant textual alternative to the image"/></li>
+
+		</ul>
+	</section>
+	<section>
+		<h3><b> Akademia Górniczo - Hutnicza</b></h3>
+		<p> im. S. Staszica w Krakowie<p>
+	</section>
+	</footer>
+</body>
+</html>
+
